@@ -3,8 +3,17 @@ package jogo.ambiente;
 import java.util.HashMap;
 
 public class Ambiente {
-    HashMap<String, Evento> eventos = new HashMap<>();
+    /**
+     * HashMap criado para guardar a relação entre uma String e um Evento
+     * para facilitar a criação de eventos
+     */
+    private HashMap<String, Evento> eventos = new HashMap<>();
     private Evento evento;
+
+    /**
+     * Função que retorna o valor do atributo privado evento
+     * @return Evento
+     */
     public Evento getEvento() {
         return this.evento;
     }

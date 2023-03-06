@@ -5,7 +5,7 @@ import jogo.ambiente.Evento;
 public class Percepcao {
     private Evento evento;
 
-    public void Percepcao(Evento evento) {
+    public Percepcao(Evento evento) {
 
     }
 

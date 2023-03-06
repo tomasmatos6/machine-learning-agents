@@ -4,21 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="14c5a2ca-1332-428a-8bca-f8d388bc81ee" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/iasa_jogo.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/jogo/Jogo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/jogo/ambiente/Ambiente.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/jogo/ambiente/Evento.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/jogo/personagem/Accao.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/jogo/personagem/Controlo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/jogo/personagem/Percepcao.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/jogo/personagem/Personagem.java" afterDir="false" />
-    </list>
+    <list default="true" id="14c5a2ca-1332-428a-8bca-f8d388bc81ee" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -47,7 +33,13 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true"
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -58,7 +50,11 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1677702388575</updated>
+      <workItem from="1678115211502" duration="3303000" />
     </task>
     <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
   </component>
 </project>
