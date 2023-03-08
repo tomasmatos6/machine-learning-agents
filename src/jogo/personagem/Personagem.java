@@ -54,6 +54,6 @@ public class Personagem {
      */
     private void actuar(Accao accao) {
         if(accao != null)
-            System.out.println("Açâo realizada:" + accao);
+            System.out.println("Açâo:" + accao + "\n");
     }
 }

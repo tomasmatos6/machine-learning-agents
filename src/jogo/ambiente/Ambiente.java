@@ -36,8 +36,8 @@ public class Ambiente {
         eventos.put("S", Evento.SILENCIO);
         eventos.put("R", Evento.RUIDO);
         eventos.put("A", Evento.ANIMAL);
-        eventos.put("FU", Evento.FUGA);
-        eventos.put("FO", Evento.FOTOGRAFIA);
+        eventos.put("F", Evento.FUGA);
+        eventos.put("O", Evento.FOTOGRAFIA);
         eventos.put("T", Evento.TERMINAR);
     }
     /**
