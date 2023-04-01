@@ -17,8 +17,8 @@ class Reaccao(Comportamento):
         @param estimulo, resposta
     """
     def __init__(self, estimulo, resposta):
-        self._estimulo = estimulo
-        self._resposta = resposta
+        self.__estimulo = estimulo
+        self.__resposta = resposta
     
     """
         Método que permite ativar esta reação
@@ -27,6 +27,6 @@ class Reaccao(Comportamento):
         @return A ação a ser executada
     """
     def activar(self, percepcao):
-        intensidade = self._estimulo.detectar(percepcao)
+        intensidade = self.__estimulo.detectar(percepcao)
         if(intensidade > 0):
-            return self._resposta.activar(percepcao, intensidade)
+            return self.__resposta.activar(percepcao, intensidade)

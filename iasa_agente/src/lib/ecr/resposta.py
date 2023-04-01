@@ -1,6 +1,9 @@
 
 """
     Classe Resposta
+    Define uma resposta a estímulos, em termos de acção a realizar 
+    e da respectiva prioridade
+
 
     Esta classe permite gerar um resposta que o agente 
     irá desempenhar.

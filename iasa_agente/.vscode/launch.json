@@ -1,0 +1,15 @@
+{
+    "version": "1.0.0",
+    "configurations": [
+        {
+            "name": "Executar teste_react.py",
+            "type": "python",
+            "request": "launch",
+            "program": "${workspaceFolder}/src/teste/teste_react.py",
+            "cwd": "${workspaceFolder}",
+            "env": {
+                "PYTHONPATH": "${workspaceFolder}/src;${workspaceFolder}/src/lib"
+            }
+        }
+    ]
+}
