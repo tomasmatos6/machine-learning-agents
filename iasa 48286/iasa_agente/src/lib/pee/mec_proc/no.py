@@ -34,7 +34,11 @@ class No():
         return self.__antecessor
         
     """
-        Construtor da classe No
+        Construtor da classe No onde pode ser instanciado:
+            - Um nó raiz sem atecessores, com apenas o seu estado, tendo assim custo e profundidade 0;
+            - Um dos restantes nós, podendo ser um nó intermédio ou nó folha, este nó ja vai ter informação relativa ao seu antecessor
+                e operador. Neste caso, o custo será a soma dos custo dos nós antecessores, e a profundidade será a soma da profundidade
+                do antecessor mais um.
     """
     def __init__(self, estado, operador=None, antecessor=None):
         self.__estado = estado

@@ -1,12 +1,17 @@
 from abc import ABC, abstractmethod
 
 """
-    Classe Fronteira que permite inserir e remover nós de forma ordenada, existe tamém
-    a possibilidade de saber se esta se encontra vazia.
+    Classe abstrata Fronteira que permite inserir e remover nós de forma ordenada, existe também a possibilidade de saber 
+    se esta se encontra vazia. Um mecanismo de procura pode terminar o seu funcionamento quando chegar ao objetivo ou tiver
+    explorado toda a sua fronteira.
+
+    Esta classe guarda uma lista de nós ainda não explorados durante a procura. Os nós são inseridos de maneira diferente,
+    dependendo do tipo de fronteira, podendo ser do tipo FIFO(first in first out) ou LIFO(last in first out).
 """
 class Fronteira(ABC):
     """
-        Propriedade
+        Atributos read-only:
+        Pode ser visto como getters para as propriedades privadas.
     """
     @property
     def vazia(self):

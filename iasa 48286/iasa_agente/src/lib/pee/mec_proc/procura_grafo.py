@@ -1,9 +1,13 @@
+from abc import ABC
 from pee.mec_proc.mecanismo_procura import MecanismoProcura
 
 """
-    Classe ProcuraGrafo
+    Classe abstrata ProcuraGrafo que representa um mecanismo de procura em grafo.
+    Este tipo de procura mantém a informação dis nós já explorados, sendo assim é necessário implementar se memória.
+    Visto que existe memória é possível optimizar os resultados e garantir que se existe uma solução, esta vai ser encontrada,
+    sendo que é garantido que o agente não repete os mesmos erros, impedindo loops infinitos de exploração.
 """
-class ProcuraGrafo(MecanismoProcura):
+class ProcuraGrafo(ABC, MecanismoProcura):
     """
         Método protegido iniciar_memoria() que inicia a memória incluindo memória de nós explorados.
     """

@@ -6,13 +6,16 @@
         - Permite remover o primeiro nó do percurso
 """
 class Solucao():
+    """
+        Atributos read-only:
+        Pode ser visto como getters para as propriedades privadas.
+    """
     @property
     def dimensao(self):
         return len(self.__percurso)
     
     """
-        Construtor da classe Solucao onde é construído o percurso através do no final recebido e dos
-        seus antecessores.
+        Construtor da classe Solucao onde é construído o percurso através do nó final recebido e dos seus antecessores.
     """
     def __init__(self, no_final):
         self.__percurso = []

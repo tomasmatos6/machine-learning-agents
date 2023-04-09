@@ -2,17 +2,17 @@ from abc import ABC, abstractmethod
 
 
 """
-    Classe Estado que representa uma situação (configuração) na 
-    resolução de um problema. Apresenta uma identificação única.
+    Classe abstrata Estado que representa uma situação (configuração) na resolução de um problema. 
+    Apresenta uma identificação única.
 """
 class Estado(ABC):
-    """
-        Método abstrato id_valor() que define identificação única do estado 
-        em função da sua informação (valor de estado).
-    """
+    
     @abstractmethod
     def id_valor(self):
-        raise NotImplementedError
+        """
+            Método abstrato id_valor() que define identificação única do estado 
+            em função da sua informação (valor de estado).
+        """
     
     """
         Método hash() que define identificação única de um objecto.
