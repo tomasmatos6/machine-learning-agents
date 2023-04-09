@@ -1,34 +1,34 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="AutoImportSettings">
-    <option name="autoReloadType" value="SELECTIVE" />
-  </component>
   <component name="ChangeListManager">
-    <list default="true" id="14c5a2ca-1332-428a-8bca-f8d388bc81ee" name="Changes" comment="Completed the code and started some comments">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/jogo/ambiente/Ambiente.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/jogo/ambiente/Ambiente.java" afterDir="false" />
+    <list default="true" id="d341457d-e3eb-456a-a6fe-6198f0fa106f" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/iasa_jogo.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/jogo/Jogo.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/jogo/ambiente/Ambiente.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/jogo/ambiente/Evento.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/jogo/maqest/Estado.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/jogo/maqest/MaquinaEstados.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/jogo/maqest/Transicao.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/jogo/personagem/Accao.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/jogo/personagem/Controlo.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/jogo/personagem/Percepcao.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/jogo/personagem/Personagem.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="FileTemplateManagerImpl">
-    <option name="RECENT_TEMPLATES">
-      <list>
-        <option value="Class" />
-        <option value="Enum" />
-      </list>
-    </option>
-  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="MarkdownSettingsMigration">
-    <option name="stateVersion" value="1" />
-  </component>
-  <component name="ProjectId" id="2MQaiaPVVEUpklJirOYLpvdzTrs" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectId" id="2NNBZHnhVONFyJjoHZ9Ajmeu98B" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -38,42 +38,20 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "C:/Users/tomas/OneDrive/Documents/ISEL/LEIM/IASA",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
+    "last_opened_file_path": "C:/Users/tomas/OneDrive/Documents/ISEL/LEIM/iasa 48286",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="14c5a2ca-1332-428a-8bca-f8d388bc81ee" name="Changes" comment="" />
-      <created>1677702388575</created>
+      <changelist id="d341457d-e3eb-456a-a6fe-6198f0fa106f" name="Changes" comment="" />
+      <created>1679494719960</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1677702388575</updated>
-      <workItem from="1678115211502" duration="3303000" />
-      <workItem from="1678136332279" duration="646000" />
-      <workItem from="1678183061741" duration="1445000" />
-      <workItem from="1678185421268" duration="35000" />
+      <updated>1679494719960</updated>
+      <workItem from="1679494722402" duration="30000" />
     </task>
-    <task id="LOCAL-00001" summary="Completed the code and started some comments">
-      <created>1678136380016</created>
-      <option name="number" value="00001" />
-      <option name="presentableId" value="LOCAL-00001" />
-      <option name="project" value="LOCAL" />
-      <updated>1678136380016</updated>
-    </task>
-    <option name="localTasksCounter" value="2" />
     <servers />
-  </component>
-  <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="3" />
-  </component>
-  <component name="VcsManagerConfiguration">
-    <MESSAGE value="Completed the code and started some comments" />
-    <option name="LAST_COMMIT_MESSAGE" value="Completed the code and started some comments" />
   </component>
 </project>
