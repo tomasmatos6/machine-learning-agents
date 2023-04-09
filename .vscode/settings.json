@@ -1,6 +1,0 @@
-{
-    "python.analysis.extraPaths": [
-        "./iasa_agente/src/lib",
-        "./iasa_agente/src/controlo_react"
-    ]
-}
