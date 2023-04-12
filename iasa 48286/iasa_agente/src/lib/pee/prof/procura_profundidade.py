@@ -4,7 +4,7 @@ from pee.mec_proc.mecanismo_procura import MecanismoProcura
 """
     Classe ProcuraProfundidade que representa um mecanismo de procura em profundidade.
     Este algoritmo inicia no nó inicial e explora até ao fim cada ramo seguinte antes de voltar para o ramo anterior.
-    Sendo que este método não garante que a solução encontrada seja a melhor.
+    Sendo que este método não garante que a solução encontrada seja a melhor, ou que encontre um solução sequer.
 
     É utilizada uma fronteira LIFO.
 """

@@ -7,7 +7,7 @@ from pee.mec_proc.mecanismo_procura import MecanismoProcura
     Visto que existe memória é possível optimizar os resultados e garantir que se existe uma solução, esta vai ser encontrada,
     sendo que é garantido que o agente não repete os mesmos erros, impedindo loops infinitos de exploração.
 """
-class ProcuraGrafo(ABC, MecanismoProcura):
+class ProcuraGrafo(MecanismoProcura, ABC):
     """
         Método protegido iniciar_memoria() que inicia a memória incluindo memória de nós explorados.
     """
