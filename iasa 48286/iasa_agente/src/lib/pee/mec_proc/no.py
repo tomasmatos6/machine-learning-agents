@@ -53,7 +53,7 @@ class No():
             self.__custo = 0
             
     """
-        Método It() que define relação “menor” (“less than”) de comparação entre nós.
+        Método lt() que define relação “menor” (“less than”) de comparação entre nós.
     """
-    def __It__(self, no):
+    def __lt__(self, no):
         return self.custo < no.custo

@@ -7,6 +7,7 @@ from pee.mec_proc.mecanismo_procura import MecanismoProcura
     Sendo que este método não garante que a solução encontrada seja a melhor, ou que encontre um solução sequer.
 
     É utilizada uma fronteira LIFO.
+    Herda da classe MecanismoProcura.
 """
 class ProcuraProfundidade(MecanismoProcura):
     """
@@ -19,6 +20,10 @@ class ProcuraProfundidade(MecanismoProcura):
     """
         Método protegido memorizar() que memoriza um nó de acordo com o tipo de procura, 
         concretiza o método abstracto do mecanismo de procura.
+        
+        Aumenta a complexidade espacial se esta for maior que a anterior, sendo a complexidade
+        espacial o número de nós memorizados.
     """
     def _memorizar(self, no):
         self._fronteira.inserir(no)
+        self.complexidade_espacial = max(len(self._fronteira._nos), self.complexidade_espacial)

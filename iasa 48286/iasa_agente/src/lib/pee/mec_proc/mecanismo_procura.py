@@ -12,10 +12,29 @@ from pee.mec_proc.solucao import Solucao
 """
 class MecanismoProcura(ABC):
     """
+        Atributos read-only:
+        Pode ser visto como getters para as propriedades privadas.
+    """
+    # Número de nós explorados/expandidos
+    @property
+    def complexidade_temporal(self):
+        return self.__complexidade_temporal
+    
+    # Número maixo de nós em memória
+    @property
+    def complexidade_espacial(self):
+        return self.__complexidade_espacial
+    
+    
+    
+    """
         Construtor da classe MecanismoProcura onde é declarada a fronteira.
+        A complexidade temporal e a complexidade espacial são ambas iniciadas a 0.
     """
     def __init__(self, fronteira):
         self._fronteira = fronteira
+        self.__complexidade_temporal = 0
+        self.__complexidade_espacial = 0
     
     """
         Método protegido iniciar_memoria() onde é iniciada a fronteira.
@@ -26,7 +45,10 @@ class MecanismoProcura(ABC):
     
     @abstractmethod
     def _memorizar(no):
-        "Memoriza um nó de acordo com o tipo de procura"
+        """
+        Memoriza um nó de acordo com o tipo de procura, a complexidade espacial é dada 
+        pelo o número de nós em memória.
+        """
     
     """
         Método procurar() onde é implementado o algoritmo geral de resolução do problema.
@@ -39,6 +61,8 @@ class MecanismoProcura(ABC):
                 - Se o estado deste nó for o objetivo do problema, retornar a solução;
                 - Se o estado deste nó não for o objetivo do problema, memorizar todos os nós retornados
                     por expandir o nó currente;
+                    
+        Aumenta a complexidade temporal por cada nó explorado, ou seja, expandido.
     """
     def procurar(self, problema):
         self._iniciar_memoria()
@@ -50,6 +74,7 @@ class MecanismoProcura(ABC):
                 return Solucao(no)
             for no_sucessor in self._expandir(problema.no):
                 self._memorizar(no_sucessor)
+            self.__complexidade_temporal += 1 # Complexidade temporal representa o número de nós explorados
         
     """
         Método protegido expandir() onde é aplicado o algoritmo de expansão de um nó.

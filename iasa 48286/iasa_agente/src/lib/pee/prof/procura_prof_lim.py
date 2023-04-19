@@ -52,9 +52,24 @@ class ProcuraProfLim(ProcuraProfundidade):
         ciclos em relação a outros ramos.
     """
     def _ciclo(self, no):
+        """
         antecessor = no.antecessor
         while antecessor:
             if no.estado == antecessor.estado:
                 return True
-            antecessor = antecessor.estado
+            antecessor = antecessor.antecessor
         return False
+        """
+        return no.estado in self.__estados_antecessores(no)
+    
+    """
+        Método privado estados_antecessores que retorna através do yield todos os antecessores do
+        dado nó.
+        É utilizado o método yield para salvar recurso sendo que serão guardados os antecessores na
+        memória interna do yield.
+    """
+    def __estados_antecessores(self, no):
+        antecessor = no.antecessor
+        while antecessor:
+            yield antecessor.estado
+            antecessor = antecessor.antecessor
