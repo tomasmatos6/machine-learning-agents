@@ -12,5 +12,5 @@ class AvaliadorCustoUnif(Avaliador):
         Método prioridade() que neste caso depende de uma estimativa do custo da solução através do
         nó, retornando assim esse valor.
     """
-    def prioridade(no):
+    def prioridade(self, no):
         return no.custo

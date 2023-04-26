@@ -15,7 +15,7 @@ class ProcuraMelhorPrim(ProcuraGrafo):
         instância da classe Avaliador.
     """
     def __init__(self, avaliador):
-        super().__init__(FronteiraPrioridade())
+        super().__init__(FronteiraPrioridade)
         self._avaliador = avaliador
         
     """

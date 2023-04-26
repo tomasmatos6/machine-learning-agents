@@ -25,6 +25,13 @@ class MecanismoProcura(ABC):
     def complexidade_espacial(self):
         return self.__complexidade_espacial
     
+    @complexidade_espacial.setter
+    def complexidade_espacial(self, value):
+        self.__complexidade_espacial = value
+        
+    @complexidade_temporal.setter
+    def complexidade_temporal(self, value):
+        self.complexidade_temporal = value
     
     
     """
@@ -40,7 +47,7 @@ class MecanismoProcura(ABC):
         Método protegido iniciar_memoria() onde é iniciada a fronteira.
     """
     def _iniciar_memoria(self):
-        self._fronteira.iniciar()
+        self._fronteira.iniciar(self)
     
     
     @abstractmethod
@@ -68,11 +75,11 @@ class MecanismoProcura(ABC):
         self._iniciar_memoria()
         no = No(problema.estado_inicial)
         self._memorizar(no)
-        while not(self._fronteira.vazia()):
-            self._fronteira.remover()
+        while not(self._fronteira.vazia == True):
+            no = self._fronteira.remover(self)
             if(problema.objetivo(no.estado)):
                 return Solucao(no)
-            for no_sucessor in self._expandir(problema.no):
+            for no_sucessor in self._expandir(problema, no):
                 self._memorizar(no_sucessor)
             self.__complexidade_temporal += 1 # Complexidade temporal representa o número de nós explorados
         
@@ -85,10 +92,10 @@ class MecanismoProcura(ABC):
                 - Criar o estado sucessor através do método aplicar() do operador;
                 - Se houver estado sucessor libertar um novo No;
     """
-    def _expandir(problema, no):
+    def _expandir(self, problema, no):
         for operador in problema.operadores:
             estado_sucessor = operador.aplicar(no.estado)
-            if(estado_sucessor): 
+            if estado_sucessor: 
                 # Se houver estado sucessor libertar um novo No
                 yield No(estado_sucessor, operador, no)
         

@@ -1,3 +1,4 @@
+from lib.pee.mec_proc.no import No
 from pee.mec_proc.mecanismo_procura import MecanismoProcura
 
 """
@@ -26,7 +27,7 @@ class ProcuraGrafo(MecanismoProcura):
     def _memorizar(self, no):
         if(self._manter):
             self._explorados[no.estado] = no
-            self._fronteira.insert(no)
+            self._fronteira.inserir(self, no)
             self.complexidade_espacial = max(len(self._explorados), self.complexidade_espacial)
         
     """

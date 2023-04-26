@@ -14,6 +14,10 @@ class Solucao():
     def dimensao(self):
         return len(self.__percurso)
     
+    @property
+    def percurso(self):
+        return self.__percurso
+    
     """
         Construtor da classe Solucao onde é construído o percurso através do nó final recebido e dos seus antecessores.
     """

@@ -1,4 +1,5 @@
-from fronteira import Fronteira
+from lib.pee.mec_proc.no import No
+from .fronteira import Fronteira
 from heapq import heappush, heappop
 
 """
@@ -16,7 +17,7 @@ class FronteiraPrioridade(Fronteira):
     """
     def __init__(self, avaliador):
         super().__init__()
-        self.__avaliador = avaliador
+        self._avaliador = avaliador
         
     """
         Método inserir() onde é inserido um nó baseado na prioridade desse nó, sendo assim são 
@@ -24,7 +25,7 @@ class FronteiraPrioridade(Fronteira):
         
     """
     def inserir(self, no):
-        prioridade = self.__avaliador.prioridade(no)
+        prioridade = self._avaliador.prioridade(no)
         heappush(self._nos, (prioridade, no))
         
     """

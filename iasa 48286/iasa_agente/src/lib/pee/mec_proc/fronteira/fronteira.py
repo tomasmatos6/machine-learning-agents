@@ -15,7 +15,7 @@ class Fronteira(ABC):
     """
     @property
     def vazia(self):
-        return len(self._nos == 0)
+        return len(self._nos) == 0
     
     """
         Construtor da classe Fronteira onde é chamado o método iniciar().
@@ -31,7 +31,7 @@ class Fronteira(ABC):
     
     
     @abstractmethod
-    def inserir(no):
+    def inserir(self, no):
         """
             Insere um nó na fronteira, dependendo do tipo de fronteira será inserido
             de maneira diferente.

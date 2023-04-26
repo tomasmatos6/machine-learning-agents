@@ -19,19 +19,19 @@ class Problema(ABC):
     """
     @property
     def estado_inicial(self):
-        return self.estado_inicial
+        return self.__estado_inicial
     
     @property
     def operadores(self):
-        return self.operadores
+        return self.__operadores
     
     """
         Construtor da classe Problema, onde é guardado o estado inicial e a lista de operadores.
     """
     def __init__(self, estado_inicial, operadores):
         
-        self.estado_inicial = estado_inicial
-        self.operadores = operadores
+        self.__estado_inicial = estado_inicial
+        self.__operadores = operadores
 
     @abstractmethod
     def objetivo(self, estado):
