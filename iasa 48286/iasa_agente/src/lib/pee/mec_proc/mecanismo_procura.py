@@ -31,7 +31,7 @@ class MecanismoProcura(ABC):
         
     @complexidade_temporal.setter
     def complexidade_temporal(self, value):
-        self.complexidade_temporal = value
+        self.__complexidade_temporal = value
     
     
     """
@@ -42,7 +42,7 @@ class MecanismoProcura(ABC):
         self._fronteira = fronteira
         self.__complexidade_temporal = 0
         self.__complexidade_espacial = 0
-    
+        
     """
         Método protegido iniciar_memoria() onde é iniciada a fronteira.
     """
@@ -74,7 +74,7 @@ class MecanismoProcura(ABC):
     def procurar(self, problema):
         self._iniciar_memoria()
         no = No(problema.estado_inicial)
-        self._memorizar(no)
+        self._fronteira.inserir(no)
         while not(self._fronteira.vazia == True):
             no = self._fronteira.remover()
             if(problema.objetivo(no.estado)):

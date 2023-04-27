@@ -56,4 +56,4 @@ class No():
         Método lt() que define relação “menor” (“less than”) de comparação entre nós.
     """
     def __lt__(self, no):
-        return self.custo < no.custo
+        return self.__custo < no.custo

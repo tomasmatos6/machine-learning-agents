@@ -20,24 +20,24 @@ class ProcuraProfLim(ProcuraProfundidade):
         return self.__prof_max
     
     @prof_max.setter
-    def prof_max(self, max):
-        self.__prof_max = max
+    def prof_max(self, prof_max):
+        self.__prof_max = prof_max
     
     """
         Construtor da classe ProcuraProfLim que recebe prof_max que representa a profundidade
         máxima desta procura, e é chamado o construtor da classe pai.
     """
-    def __init__(self, prof_max):
-        self.__prof_max = prof_max
+    def __init__(self, prof_max=100):
         super().__init__()
+        self.__prof_max = prof_max
     
     """
         Método protegido expandir() que expande um nó se a sua profundidade for inferior à
         profundidade máxima da procura.
     """  
     def _expandir(self, problema, no):
-        if(no.profundidade < self.prof_max):
-            super()._expandir(problema, no)
+        if(no.profundidade < self.__prof_max):
+            yield from super()._expandir(problema, no)
      
     """
         Método protegido memorizar() que memoriza um nó se não corresponder a um ciclo.

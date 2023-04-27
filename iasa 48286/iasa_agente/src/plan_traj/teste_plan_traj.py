@@ -25,8 +25,8 @@ LIGACOES = [
 def TestePlanTraj():
     planeador = PlaneadorTrajeto
     solucao = planeador.planear(LIGACOES, LOC_INICIAL, LOC_FINAL)
-    print(solucao)
     if(solucao):
         Trajeto(solucao).mostrar()
+    
         
 TestePlanTraj()
