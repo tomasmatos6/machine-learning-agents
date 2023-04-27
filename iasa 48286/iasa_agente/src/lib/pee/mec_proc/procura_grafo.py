@@ -27,7 +27,7 @@ class ProcuraGrafo(MecanismoProcura):
     def _memorizar(self, no):
         if(self._manter):
             self._explorados[no.estado] = no
-            self._fronteira.inserir(self, no)
+            self._fronteira.inserir(no)
             self.complexidade_espacial = max(len(self._explorados), self.complexidade_espacial)
         
     """

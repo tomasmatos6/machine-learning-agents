@@ -47,7 +47,7 @@ class MecanismoProcura(ABC):
         Método protegido iniciar_memoria() onde é iniciada a fronteira.
     """
     def _iniciar_memoria(self):
-        self._fronteira.iniciar(self)
+        self._fronteira.iniciar()
     
     
     @abstractmethod
@@ -76,7 +76,7 @@ class MecanismoProcura(ABC):
         no = No(problema.estado_inicial)
         self._memorizar(no)
         while not(self._fronteira.vazia == True):
-            no = self._fronteira.remover(self)
+            no = self._fronteira.remover()
             if(problema.objetivo(no.estado)):
                 return Solucao(no)
             for no_sucessor in self._expandir(problema, no):
