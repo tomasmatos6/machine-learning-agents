@@ -1,9 +1,10 @@
-import sys
 from planeador.ligacao import Ligacao
 from planeador.planeador_trajeto import PlaneadorTrajeto
 from planeador.trajeto import Trajeto
 
-#print(sys.path)
+"""
+    Teste ao planeador de trajetos
+"""
 
 LOC_INICIAL = 'loc-0'
 LOC_FINAL = 'loc-4'
