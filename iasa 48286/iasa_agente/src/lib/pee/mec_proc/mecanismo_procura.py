@@ -19,7 +19,7 @@ class MecanismoProcura(ABC):
     @property
     def complexidade_temporal(self):
         return self.__complexidade_temporal
-    
+    """
     # Número maixo de nós em memória
     @property
     def complexidade_espacial(self):
@@ -28,7 +28,7 @@ class MecanismoProcura(ABC):
     @complexidade_espacial.setter
     def complexidade_espacial(self, value):
         self.__complexidade_espacial = value
-        
+    """
     @complexidade_temporal.setter
     def complexidade_temporal(self, value):
         self.__complexidade_temporal = value
@@ -41,7 +41,7 @@ class MecanismoProcura(ABC):
     def __init__(self, fronteira):
         self._fronteira = fronteira
         self.__complexidade_temporal = 0
-        self.__complexidade_espacial = 0
+        #self.__complexidade_espacial = 0
         
     """
         Método protegido iniciar_memoria() onde é iniciada a fronteira.
@@ -76,12 +76,13 @@ class MecanismoProcura(ABC):
         no = No(problema.estado_inicial)
         self._fronteira.inserir(no)
         while not(self._fronteira.vazia == True):
+            self.__complexidade_temporal += 1 # Complexidade temporal representa o número de nós explorados
             no = self._fronteira.remover()
             if(problema.objetivo(no.estado)):
                 return Solucao(no)
             for no_sucessor in self._expandir(problema, no):
                 self._memorizar(no_sucessor)
-            self.__complexidade_temporal += 1 # Complexidade temporal representa o número de nós explorados
+            
         
     """
         Método protegido expandir() onde é aplicado o algoritmo de expansão de um nó.

@@ -11,11 +11,13 @@ from plan_traj.mod_prob.problema_plan_traj import ProblemaPlanTraj
    são utilizados todos os métodos de procura. 
 """
 class PlaneadorTrajeto():
+    def __init__(self, mecanismo):
+        self.__mecanismo = mecanismo
     """
         Método planear() quee cria um ProblemaPlanTraj, depois é utilizado o método procurar() do mecanismo de 
         procura selecionado. No  final é retornada a solução e mostrada a complexidade temporal e espacial.
     """
-    def planear(ligacoes, loc_inicial, loc_final):
+    def planear(self, ligacoes, loc_inicial, loc_final):
         problema = ProblemaPlanTraj(ligacoes, loc_inicial, loc_final)
         """
             Teste Procura Custo Uniforme, onde o é necessário verificar se o trajeto escolhido é o mais económico.
@@ -41,7 +43,7 @@ class PlaneadorTrajeto():
             neste caso não apresenta problemas devido à complexidade do problema.
         """
         procura_largura = ProcuraLargura()
-        solucao = procura_custo_uniforme.procurar(problema)
-        print('Complexidade Temporal: ' + str(procura_custo_uniforme.complexidade_temporal))
-        print('Complexidade Espacial: ' + str(procura_custo_uniforme.complexidade_espacial))
+        solucao = self.__mecanismo.procurar(problema)
+        print('Complexidade Temporal: ' + str(self.__mecanismo.complexidade_temporal))
+        print('Complexidade Espacial: ' + str(self.__mecanismo.complexidade_espacial))
         return solucao

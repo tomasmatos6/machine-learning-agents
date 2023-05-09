@@ -1,3 +1,8 @@
+from lib.pee.larg.procura_largura import ProcuraLargura
+from lib.pee.melhor_prim.procura_custo_unif import ProcuraCustoUnif
+from lib.pee.prof.procura_prof_iter import ProcuraProfIter
+from lib.pee.prof.procura_prof_lim import ProcuraProfLim
+from lib.pee.prof.procura_profundidade import ProcuraProfundidade
 from planeador.ligacao import Ligacao
 from planeador.planeador_trajeto import PlaneadorTrajeto
 from planeador.trajeto import Trajeto
@@ -23,11 +28,22 @@ LIGACOES = [
     Ligacao('loc-6', 'loc-3', 15),
 ]
 
+MECANISMOS = [
+    ProcuraCustoUnif(),
+    ProcuraProfLim(),
+    ProcuraProfIter(),
+    ProcuraProfundidade(),
+    ProcuraLargura()
+]
+
 def TestePlanTraj():
-    planeador = PlaneadorTrajeto
-    solucao = planeador.planear(LIGACOES, LOC_INICIAL, LOC_FINAL)
-    if(solucao):
-        Trajeto(solucao).mostrar()
+    for mecanismo in MECANISMOS:
+        print(mecanismo.__class__.__name__, "\n")
+        planeador = PlaneadorTrajeto(mecanismo)
+        solucao = planeador.planear(LIGACOES, LOC_INICIAL, LOC_FINAL)
+        if(solucao):
+            Trajeto(solucao).mostrar()
+        print("------------------------------------------")
     
         
 TestePlanTraj()

@@ -1,3 +1,4 @@
+from abc import abstractproperty
 from lib.pee.mec_proc.no import No
 from pee.mec_proc.mecanismo_procura import MecanismoProcura
 
@@ -10,6 +11,12 @@ from pee.mec_proc.mecanismo_procura import MecanismoProcura
     Herda da classe MecanismoProcura.
 """
 class ProcuraGrafo(MecanismoProcura):
+    @property
+    def complexidade_espacial(self):
+        return len(self._explorados)
+    
+    
+    
     """
         Método protegido iniciar_memoria() que inicia a memória incluindo memória de nós explorados.
     """
@@ -28,7 +35,7 @@ class ProcuraGrafo(MecanismoProcura):
         if(self._manter(no)):
             self._explorados[no.estado] = no
             self._fronteira.inserir(no)
-            self.complexidade_espacial = max(len(self._explorados), self.complexidade_espacial)
+            #self.complexidade_espacial = max(len(self._explorados), self.complexidade_espacial)
         
     """
         Método protegido manter() que verifica se nó deve ser mantido para exploração.

@@ -10,7 +10,7 @@ class Trajeto:
         Construtor da classe Trajeto, é guardado uma lista com o nome das localidades, a dimensão da solução
         e o custo do percurso.
     """
-    def __init__(self, solucao: Solucao):
+    def __init__(self, solucao):
         self.__localidades = [no.estado.localidade for no in solucao]
         self.__dimensao = solucao.dimensao
         self.__custo = solucao.percurso[-1].custo

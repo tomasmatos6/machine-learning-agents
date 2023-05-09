@@ -17,6 +17,10 @@ class Fronteira(ABC):
     def vazia(self):
         return len(self._nos) == 0
     
+    @property
+    def dimensao(self):
+        return len(self._nos)
+    
     """
         Construtor da classe Fronteira onde é chamado o método iniciar().
     """

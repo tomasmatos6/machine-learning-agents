@@ -1,4 +1,4 @@
-from lib.pee.melhor_prim.avaliador_custo_unif import AvaliadorCustoUnif
+from lib.pee.melhor_prim.aval.avaliador_custo_unif import AvaliadorCustoUnif
 from lib.pee.melhor_prim.procura_melhor_prim import ProcuraMelhorPrim
 
 """
