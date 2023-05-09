@@ -42,6 +42,12 @@ Dimensão:  5
 Custo:  21
 
 ------------------------------------------
+ProcuraProfLim
+
+Corre infinitamente.
+
+------------------------------------------
+
 ProcuraProfIter
 
 Complexidade Temporal: 58
@@ -51,6 +57,11 @@ Solução:  [0, 3, 6, 9]
 Dimensão:  4
 
 Custo:  27
+
+------------------------------------------
+ProcuraProfundidade
+
+Corre infinitamnete.
 
 ------------------------------------------
 ProcuraLargura

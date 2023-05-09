@@ -20,7 +20,7 @@ class ProcuraProfundidade(MecanismoProcura):
     """
     def __init__(self):
         super().__init__(FronteiraLIFO())
-        self.__complexidade_espacial = 0;
+        self.__complexidade_espacial = 0
         
     """
         Método protegido memorizar() que memoriza um nó de acordo com o tipo de procura, 

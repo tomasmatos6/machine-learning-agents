@@ -12,3 +12,9 @@ class OperadorEncher(Operador):
         
     def custo(self, estado, estado_suc):
         return self.__custo
+    
+    def __str__(self):
+        return "Encher(%s)" % self.__volume
+
+    def __repr__(self):
+        return "Encher(%s)" % self.__volume

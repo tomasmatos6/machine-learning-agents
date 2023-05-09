@@ -12,3 +12,9 @@ class OperadorVazar(Operador):
         
     def custo(self, estado, estado_suc):
         return self.__custo
+    
+    def __str__(self):
+        return "Vazar(%s)" % self.__volume
+
+    def __repr__(self):
+        return "Vazar(%s)" % self.__volume
