@@ -12,9 +12,9 @@ TAMANHO_FINAL = 9
 
 MECANISMOS = [
     ProcuraCustoUnif(),
-    ProcuraProfLim(),
+    #ProcuraProfLim(),
     ProcuraProfIter(),
-    ProcuraProfundidade(),
+    #ProcuraProfundidade(),
     ProcuraLargura()
 ]
 
@@ -28,3 +28,40 @@ def TesteDeposito():
         print("------------------------------------------")
 
 TesteDeposito()
+
+
+"""
+ProcuraCustoUnif 
+
+Complexidade Temporal: 21
+Complexidade Espacial: 27
+Solução:  [0, 2, 4, 6, 9]
+
+Dimensão:  5
+
+Custo:  21
+
+------------------------------------------
+ProcuraProfIter
+
+Complexidade Temporal: 58
+Complexidade Espacial: 8
+Solução:  [0, 3, 6, 9]
+
+Dimensão:  4
+
+Custo:  27
+
+------------------------------------------
+ProcuraLargura
+
+Complexidade Temporal: 17
+Complexidade Espacial: 21
+Solução:  [0, 3, 6, 9]
+
+Dimensão:  4
+
+Custo:  27
+
+------------------------------------------
+"""

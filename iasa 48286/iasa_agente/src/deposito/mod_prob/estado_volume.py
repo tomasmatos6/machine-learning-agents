@@ -7,7 +7,7 @@ class EstadoVolume(Estado):
     def volume(self):
         return self.__volume
     
-    def __init(self, volume):
+    def __init__(self, volume):
         self.__volume = volume
         
     def id_valor(self):

@@ -13,5 +13,5 @@ class ProblemaPlanDeposito(Problema):
                           OperadorVazar(3)])
         self.__estado_final = EstadoVolume(vol_final)
         
-        def objetivo(self, estado):
-            return estado == self.__estado_final
+    def objetivo(self, estado):
+        return estado == self.__estado_final
