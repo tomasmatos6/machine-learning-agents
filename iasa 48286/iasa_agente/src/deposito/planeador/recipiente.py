@@ -2,8 +2,6 @@ from attr import dataclass
 
 
 @dataclass
-class ligacao:
+class recipiente:
     volume: int
-    operador: str
-    custo: int
     

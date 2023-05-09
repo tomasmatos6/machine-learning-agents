@@ -1,4 +1,4 @@
-class Trajeto:
+class AcoesEncherVazar:
     def __init__(self, solucao):
         self.__volumes = [no.estado.volume for no in solucao]
         self.__dimensao = solucao.dimensao

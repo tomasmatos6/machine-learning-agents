@@ -5,7 +5,7 @@
             "name": "Executar teste_react.py",
             "type": "python",
             "request": "launch",
-            "program": "${workspaceFolder}/src/plan_traj/teste_plan_traj.py",
+            "program": "${workspaceFolder}/src/deposito/teste_deposito.py",
             "cwd": "${workspaceFolder}",
             "env": {
                 "PYTHONPATH": "${workspaceFolder}/src;${workspaceFolder}/src/lib"

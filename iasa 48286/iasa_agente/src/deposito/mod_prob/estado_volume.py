@@ -11,4 +11,4 @@ class EstadoVolume(Estado):
         self.__volume = volume
         
     def id_valor(self):
-        return int(self.__volume[-1])
+        return self.__volume
