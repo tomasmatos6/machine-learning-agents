@@ -7,14 +7,24 @@ from deposito.planeador.planeador import Planeador
 from deposito.planeador.acoes_encher_vazar import AcoesEncherVazar
 
 
+"""
+Problema do deposito de agua:
+Dado um deposito de agua com um determinado volume inicial
+de agua e dois recipientes de 2 e 3 litros, com quais é
+possível encher e vazar o deposito, determinar qual a
+sequencia de acoes de encher e vazar que deve ser feita
+para o deposito ter um determinado volume final de agua.
+O custo de cada accao é proporcional ao quadrado do volume 
+de agua transferido.
+"""
+
 TAMANHO_INICIAL = 0
 TAMANHO_FINAL = 9
 
 MECANISMOS = [
     ProcuraCustoUnif(),
-    #ProcuraProfLim(),
+    ProcuraProfLim(4),
     ProcuraProfIter(),
-    #ProcuraProfundidade(),
     ProcuraLargura()
 ]
 
@@ -33,44 +43,44 @@ TesteDeposito()
 """
 ProcuraCustoUnif 
 
-Complexidade Temporal: 21
-Complexidade Espacial: 27
-Solução:  [0, 2, 4, 6, 9]
+Complexidade Temporal: 13
+Complexidade Espacial: 14
+Solução:  [Encher(2), Encher(2), Encher(2), Encher(3)]
 
-Dimensão:  5
+Dimensão:  4
 
 Custo:  21
 
 ------------------------------------------
-ProcuraProfLim
+ProcuraProfLim - Com 4 de profundidade máxima
 
-Corre infinitamente.
+Complexidade Temporal: 13
+Complexidade Espacial: 7
+Solução:  [Encher(3), Encher(3), Encher(3)]
 
-------------------------------------------
-
-ProcuraProfIter
-
-Complexidade Temporal: 58
-Complexidade Espacial: 8
-Solução:  [0, 3, 6, 9]
-
-Dimensão:  4
+Dimensão:  3
 
 Custo:  27
 
 ------------------------------------------
-ProcuraProfundidade
+ProcuraProfIter
 
-Corre infinitamnete.
+Complexidade Temporal: 19
+Complexidade Espacial: 5
+Solução:  [Encher(3), Encher(3), Encher(3)]
+
+Dimensão:  3
+
+Custo:  27 
 
 ------------------------------------------
 ProcuraLargura
 
-Complexidade Temporal: 17
-Complexidade Espacial: 21
-Solução:  [0, 3, 6, 9]
+Complexidade Temporal: 11
+Complexidade Espacial: 12
+Solução:  [Encher(3), Encher(3), Encher(3)]
 
-Dimensão:  4
+Dimensão:  3
 
 Custo:  27
 

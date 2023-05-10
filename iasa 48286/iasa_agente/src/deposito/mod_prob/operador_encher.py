@@ -1,20 +1,25 @@
 from deposito.mod_prob.estado_volume import EstadoVolume
+from deposito.mod_prob.operador_transferir import OperadorTransferir
 from lib.mod.operador import Operador
 
+"""
 
-class OperadorEncher(Operador):
-    def __init__(self, volume):
-        self.__custo = volume**2
-        self.__volume = volume
-        
-    def aplicar(self, estado):
-        return EstadoVolume(estado.volume + self.__volume)
-        
-    def custo(self, estado, estado_suc):
-        return self.__custo
+"""
+class OperadorEncher(OperadorTransferir):
+    """
     
-    def __str__(self):
-        return "Encher(%s)" % self.__volume
+    """
+    def aplicar(self, estado):
+        return EstadoVolume(estado.volume + self._volume)
 
+    """
+        Override do método str() para ser possível mostrar na consola o nome da ação e o seu valor,
+        nesta solução é escolhido o repr visto que o str era necessário utilizar prints.
+    """
+    def __str__(self):
+        return "Encher(%s)" % self._volume
+    """
+        Override do método repr() para ser possível mostrar na consola o nome da ação e o seu valor.
+    """
     def __repr__(self):
-        return "Encher(%s)" % self.__volume
+        return "Encher(%s)" % self._volume
