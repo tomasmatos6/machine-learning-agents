@@ -7,7 +7,7 @@ from sae import Direccao
 
 class ModeloMundo():
     """
-    
+        Mantém a informação necessária para tomar uma decisão
     """
     @property
     def alterado(self):
