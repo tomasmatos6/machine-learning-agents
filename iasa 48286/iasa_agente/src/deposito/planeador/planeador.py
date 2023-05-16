@@ -1,6 +1,8 @@
 from deposito.mod_prob.problema_plan_deposito import ProblemaPlanDeposito
 
-
+"""
+    Classe Planeador onde é criado o problema e feita a procura da solução
+"""
 class Planeador():
     def __init__(self, mecanismo):
         self.__mecanismo = mecanismo

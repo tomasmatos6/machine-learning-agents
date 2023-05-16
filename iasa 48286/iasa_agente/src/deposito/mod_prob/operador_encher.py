@@ -3,12 +3,12 @@ from deposito.mod_prob.operador_transferir import OperadorTransferir
 from lib.mod.operador import Operador
 
 """
-
+    Classe OperadorEncher que representa um operador, implementa o método abstrato aplicar da classe pai.
 """
 class OperadorEncher(OperadorTransferir):
     """
-    
-    """
+        Método aplicar() que aplicar este operador, neste caso aumentar o volume.
+    """ 
     def aplicar(self, estado):
         return EstadoVolume(estado.volume + self._volume)
 

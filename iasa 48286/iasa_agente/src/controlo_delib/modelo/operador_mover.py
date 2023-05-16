@@ -3,12 +3,11 @@ from lib.mod.operador import Operador
 from mod.agente.estado_agente import EstadoAgente
 from sae import Accao
 
-"""
 
-"""
 class OperadorMover(Operador):
     """
-    
+        Classe OperadorMover que é um operador que representa um movimento do agente, este movimento é representado por um
+        ângulo e um passo. Utiliza também um objeto do tipo ModeloMundo para verificar se o estado obtido é um estado existente.
     """
     @property
     def ang(self):
@@ -18,12 +17,13 @@ class OperadorMover(Operador):
     def accao(self):
         return self.__accao
         
-    """
-        Construtor da classe OperadorMover, onde são guardado os valores de 
-        modelo_mundo, o angulo que é o valor da direccao e a accao que é um objeto da classe
-        Accao passando a direccao.
-    """
+    
     def __init__(self, modelo_mundo, direccao):
+        """
+            Construtor da classe OperadorMover, onde são guardado os valores de 
+            modelo_mundo, o angulo que é o valor da direccao e a accao que é um objeto da classe
+            Accao passando a direccao.
+        """
         self.__modelo_mundo = modelo_mundo
         self.__ang = direccao.value
         self.__accao = Accao(direccao)

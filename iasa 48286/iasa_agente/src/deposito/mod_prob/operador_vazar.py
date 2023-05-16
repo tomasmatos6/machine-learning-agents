@@ -2,8 +2,13 @@ from deposito.mod_prob.estado_volume import EstadoVolume
 from deposito.mod_prob.operador_transferir import OperadorTransferir
 from lib.mod.operador import Operador
 
-
-class OperadorVazar(OperadorTransferir):  
+"""
+    Classe OperadorVazar que representa um operador, implementa o método abstrato aplicar da classe pai.
+"""
+class OperadorVazar(OperadorTransferir): 
+    """
+        Método aplicar() que aplicar este operador, neste caso diminuir o volume.
+    """ 
     def aplicar(self, estado):
         #return EstadoVolume(estado.volume - self._volume)
         novo_volume = estado.volume - self._volume

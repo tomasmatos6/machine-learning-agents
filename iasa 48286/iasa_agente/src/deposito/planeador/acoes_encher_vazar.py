@@ -1,3 +1,7 @@
+"""
+    Classe AcoesEncherVazar que tem como propósito ser possível mostrar as informações necessários sobre
+    as ações tomadas.
+"""
 class AcoesEncherVazar:
     def __init__(self, solucao):
         # Utilização do método __str__()

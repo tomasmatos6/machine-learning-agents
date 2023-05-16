@@ -3,7 +3,10 @@ from deposito.mod_prob.operador_encher import OperadorEncher
 from deposito.mod_prob.operador_vazar import OperadorVazar
 from lib.mod.problema.problema import Problema
 
-
+"""
+    Classe ProblemaPlanDeposito que serve para criar o problema, com o estado inicial dado pelo volume inicial,
+    e com os operadores existentes.
+"""
 class ProblemaPlanDeposito(Problema):
     def __init__(self, vol_inicial, vol_final):
         super().__init__(EstadoVolume(vol_inicial),

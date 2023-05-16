@@ -7,7 +7,7 @@ from sae import Direccao
 
 class ModeloMundo():
     """
-        Mantém a informação necessária para tomar uma decisão
+        Classe ModeloMundo que mantém a informação necessária sobre o mundo para o agente tomar uma decisão.
     """
     @property
     def alterado(self):
@@ -17,10 +17,11 @@ class ModeloMundo():
     def elementos(self):
         return self.__elementos
     
-    """
-    
-    """
     def __init__(self):
+        """
+            Construtor da classe ModeloMundo onde são guardados os valores para o estado, a lista de estados, o dicionario dos elementos,
+            a lista de operadores e uma variavél para saber se o modelo foi alterado.
+        """
         self.__estado = None
         self.__estados = []
         self.__elementos = {}
@@ -28,7 +29,9 @@ class ModeloMundo():
                              for direccao in Direccao]
         self.__alterado = False
     
-
+    """
+        Métodos para obter os valores privados desta classe
+    """
     def obter_estado(self):
         return self.__estado
 
@@ -40,10 +43,17 @@ class ModeloMundo():
 
     def obter_elemento(self, estado):
         return self.__elementos(estado.posicao)
+    "---------------------------------------------------------"
 
+    """
+        Método para calcular a distância entre a posição de dois estados
+    """
     def distancia(self, estado):
         return math.dist(self.__estado.posicao, estado.posicao)
 
+    """
+        Método actualizar() que recebe uma perceção e atualiza se necessário o modelo.
+    """
     def actualizar(self, percepcao):
         self.__estado = EstadoAgente(percepcao.posicao)
         if self.__elementos != percepcao.elementos:
@@ -54,6 +64,9 @@ class ModeloMundo():
         else:
             self.__alterado = False
 
+    """
+        Método mostrar() para mostrar os alvos e a posicao do agente
+    """
     def mostrar(self, vista):
         vista.mostrar_alvos_obst(self.__elementos)
         vista.marcar_posicao(self.__estado.posicao)
