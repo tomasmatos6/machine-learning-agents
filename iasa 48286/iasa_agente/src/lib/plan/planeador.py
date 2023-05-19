@@ -1,5 +1,7 @@
-from abc import ABC
+from abc import ABC, abstractmethod
 
 
 class Planeador(ABC):
-    raise NotImplemented
+    @abstractmethod
+    def planear(self, modelo_plan, objetivos):
+        "Plano"

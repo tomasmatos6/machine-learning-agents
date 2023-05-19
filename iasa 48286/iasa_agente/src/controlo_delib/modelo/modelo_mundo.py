@@ -1,11 +1,12 @@
 import math
 from controlo_delib.modelo.operador_mover import OperadorMover
 from mod.agente.estado_agente import EstadoAgente
+from plan.modelo.modelo_plan import ModeloPlan
 from sae import Direccao
 
 
 
-class ModeloMundo():
+class ModeloMundo(ModeloPlan):
     """
         Classe ModeloMundo que mantém a informação necessária sobre o mundo para o agente tomar uma decisão.
     """
@@ -42,7 +43,7 @@ class ModeloMundo():
         return self.__operadores
 
     def obter_elemento(self, estado):
-        return self.__elementos(estado.posicao)
+        return self.__elementos.get(estado.posicao)
     "---------------------------------------------------------"
 
     """
