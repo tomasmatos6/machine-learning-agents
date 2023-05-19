@@ -9,9 +9,9 @@ class PlanoPee(Plano):
         # Se calhar trocar por um for?
         if self.__solucao:
             passo = self.__solucao.remover()
+            prox_no = self.__solucao[0]
             if passo.estado == estado:
-                print(passo.operador)
-                return passo.operador
+                return prox_no.operador
     
     def mostrar(self, vista):
         vista.mostrar_solucao(self.__solucao)
