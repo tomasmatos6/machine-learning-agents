@@ -58,7 +58,11 @@ class ControloDelib(Controlo):
         """
             Método privado planear()
         """
-        self.__plano = self.__planeador.planear(self.__modelo_mundo, self.__objetivos)
+        if self.__objetivos:
+            self.__plano = self.__planeador.planear(self.__modelo_mundo, self.__objetivos)
+            
+        else:
+            self.__plano = None
 
     def __deliberar(self):
         """
@@ -69,11 +73,13 @@ class ControloDelib(Controlo):
 
     def __executar(self):
         "Plano foi gerado, por cada passo de processamento retorna a acao a ser executada pelo agente"
-        operador = self.__plano.obter_accao(self.__modelo_mundo.obter_estado())
-        if operador:
-            return operador.accao
+        if self.__plano:
+            operador = self.__plano.obter_accao(self.__modelo_mundo.obter_estado())
+            if operador:
+                return operador.accao
 
     def __mostrar(self):
         "Mostra o modelo mundo e mostra o plano"
-        self.__modelo_mundo.mostrar(self.vista) # <- falta a vista
-        self.__plano.mostrar(self.vista) # <- falta a vista
+        if self.__plano:
+            self.__modelo_mundo.mostrar(self.vista)
+            self.__plano.mostrar(self.vista)

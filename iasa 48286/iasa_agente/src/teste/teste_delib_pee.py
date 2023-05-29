@@ -4,4 +4,6 @@ from sae import Simulador
 
 
 controlo = ControloDelib(PlaneadorPee())
+
+
 Simulador(4, controlo).executar()
