@@ -80,6 +80,7 @@ class ControloDelib(Controlo):
 
     def __mostrar(self):
         "Mostra o modelo mundo e mostra o plano"
+        self.vista.limpar()
         if self.__plano:
             self.__modelo_mundo.mostrar(self.vista)
             self.__plano.mostrar(self.vista)

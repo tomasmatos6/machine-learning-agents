@@ -3,6 +3,10 @@ from plan.modelo.modelo_plan import ModeloPlan
 
 
 class ModeloPDMPlan(ModeloPlan, ModeloPDM):
+    """
+        Classe ModeloPDMPlan que representa o plano do processo de decisão de markov,
+        esta classe implementa a classe ModeloPlan e ModeloPDM.
+    """
     def __init__(self, modelo_plan, objetivos, rmax = 1000.0):
         self.__modelo_plan = modelo_plan
         self.__rmax = rmax
@@ -39,3 +43,14 @@ class ModeloPDMPlan(ModeloPlan, ModeloPDM):
         if sn in self.__objetivos:
             r += self.__rmax
         return r
+    
+    def Sucessores(self, s, a):
+        """
+            Método Sucessores que retorna o estado seguinte depois de aplicar a ação 'a' ao estado 's'.
+        """
+        sn = self.__transicoes.get((s, a))
+        ret = []
+        if sn:
+            ret = [sn]
+        return ret
+    

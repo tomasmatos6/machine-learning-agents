@@ -69,6 +69,5 @@ class ModeloMundo(ModeloPlan):
         Método mostrar() para mostrar os alvos e a posicao do agente
     """
     def mostrar(self, vista):
-        vista.limpar()
         vista.mostrar_alvos_obst(self.__elementos)
         vista.marcar_posicao(self.__estado.posicao)

@@ -1,8 +1,13 @@
 class MecUtil():
     """
-        Classe MecUtil()
+        Classe MecUtil() que server para calcular a utilidade dos estados e ações a serem realizadas.
     """
     def __init__(self, modelo, gama, delta_max):
+        """
+            Constructor da classe MecUtil que guarda o modelo, o gama e o delta_max.
+            O gama representa a taxa de desconto para recompensas diferidas no tempo e o delta_max representa
+            qual a variação de utilidade mais baixa entre duas ações.
+        """
         self.__modelo = modelo
         self.__gama = gama
         self.__delta_max = delta_max
@@ -33,11 +38,18 @@ class MecUtil():
     
     def util_accao(self, s, a, U):
         """
-            Utilidade de um estado fazer uma ação
+            Método util_acao() que retorna a utilidade de um estado fazer uma ação
         """
-        utilidade = 0.0
-        T, R, sn = self.__modelo.T, self.__modelo.R, a.aplicar(s)
+        """
+            utilidade = 0.0
+            T, R, sn = self.__modelo.T, self.__modelo.R, a.aplicar(s)
+            
+            if sn:
+                utilidade += (T(s, a, sn) * (R(s, a, sn) + self.__gama * U[sn]))
+            return utilidade
+        """
+        T = self.__modelo.T
+        R = self.__modelo.R
+        Sucessores = self.__modelo.Sucessores
+        return sum(T(s,a,sn) * R(s,a,sn) +   self.__gama * U[sn] for sn in Sucessores(s,a))
         
-        if sn:
-            utilidade += (T(s, a, sn) * (R(s, a, sn) + self.__gama * U[sn]))
-        return utilidade
