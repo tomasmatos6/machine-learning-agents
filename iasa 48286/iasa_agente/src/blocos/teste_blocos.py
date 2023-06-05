@@ -8,8 +8,13 @@ from plan.plan_pee.planeador_pee import PlaneadorPee
 SEQ_INICIAL = [[2, 3, 1],[],[]]
 SEQ_FINAL = [[1, 2, 3],[],[]]
 
-
-planeador = Planeador()
-solucao = planeador.planear(SEQ_INICIAL, SEQ_FINAL)
-if(solucao):
-    MostrarAcoes(solucao).mostrar()
+MECANISMOS = [
+    ProcuraCustoUnif(),
+    ProcuraAA()
+]
+for mecanismo in MECANISMOS:
+    print(mecanismo.__class__.__name__, '\n')
+    planeador = Planeador(mecanismo)
+    solucao = planeador.planear(SEQ_INICIAL, SEQ_FINAL)
+    if(solucao):
+        MostrarAcoes(solucao).mostrar()

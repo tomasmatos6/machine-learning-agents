@@ -1,9 +1,9 @@
 from controlo_delib.controlo_delib import ControloDelib
-from plan.plan_pee.planeador_pee import PlaneadorPee
+from plan.plan_pdm.planeador_pdm import PlaneadorPDM
 from sae import Simulador
 
 
-controlo = ControloDelib(PlaneadorPee())
+controlo = ControloDelib(PlaneadorPDM())
 
 
 Simulador(3, controlo).executar()

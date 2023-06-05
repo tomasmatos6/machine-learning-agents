@@ -5,6 +5,8 @@ class MostrarAcoes():
         self.__custo = solucao.percurso[-1].custo
         
     def mostrar(self):
-        print('Solução: ', self.__operadores, '\n')
+        print('Solução:')
+        for operador in self.__operadores:
+            print('     ', operador)
         print('Dimensão: ', self.__dimensao, '\n')
         print('Custo: ', self.__custo, '\n')

@@ -52,8 +52,6 @@ class OperadorMover(Operador):
         """
         Método custo() que retorna o custo entre 2 posições sendo o custo mínimo 1.
         """
-        print("Estado_suc ", estado_suc)
-        print("ESTADO ", estado)
         distancia = math.dist(estado.posicao, estado_suc.posicao)
         return max(distancia, 1)
         
