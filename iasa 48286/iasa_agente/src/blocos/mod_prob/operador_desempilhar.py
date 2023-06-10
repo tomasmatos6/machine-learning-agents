@@ -2,11 +2,18 @@ from copy import deepcopy
 
 from blocos.mod_prob.estado_pilha import EstadoPilha
 
+
 class OperadorDesempilhar():
+    """
+        Classe OperadorDesempilhar que representa o operador que desempilha um bloco da pilha.
+    """
     def __init__(self, destino):
         self.__destino = destino-1
         
     def aplicar(self, estado):
+        """
+            Método aplicar() que remove um bloco da primeira pilha para a pilha escolhida.
+        """
         novaPilha = deepcopy(estado.pilhas)
         if len(estado.pilhas[0]) != 0:
             bloco = estado.pilhas[0][0]

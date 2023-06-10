@@ -2,6 +2,9 @@ from mod.estado import Estado
 
 
 class EstadoPilha(Estado):
+    """
+        Classe EstadoPilha que representa a pilha como um estado.
+    """
     @property
     def pilhas(self):
         return self.__blocos

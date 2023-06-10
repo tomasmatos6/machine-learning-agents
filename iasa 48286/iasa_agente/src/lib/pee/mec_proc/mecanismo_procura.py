@@ -76,12 +76,13 @@ class MecanismoProcura(ABC):
         no = No(problema.estado_inicial)
         self._fronteira.inserir(no)
         while not(self._fronteira.vazia == True):
-            self.__complexidade_temporal += 1 # Complexidade temporal representa o número de nós explorados
             no = self._fronteira.remover()
             if(problema.objetivo(no.estado)):
                 return Solucao(no)
             for no_sucessor in self._expandir(problema, no):
                 self._memorizar(no_sucessor)
+            self.__complexidade_temporal += 1 # Complexidade temporal representa o número de nós explorados
+            
             
         
     """

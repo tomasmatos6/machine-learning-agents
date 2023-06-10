@@ -3,7 +3,7 @@ from plan.plan_pdm.planeador_pdm import PlaneadorPDM
 from sae import Simulador
 
 
-controlo = ControloDelib(PlaneadorPDM())
+controlo = ControloDelib(PlaneadorPDM(0.95))
 
 
-Simulador(3, controlo).executar()
+Simulador(4, controlo).executar()

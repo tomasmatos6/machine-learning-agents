@@ -49,8 +49,5 @@ class ModeloPDMPlan(ModeloPlan, ModeloPDM):
             Método Sucessores que retorna o estado seguinte depois de aplicar a ação 'a' ao estado 's'.
         """
         sn = self.__transicoes.get((s, a))
-        ret = []
-        if sn:
-            ret = [sn]
-        return ret
+        return [sn] if sn else []
     

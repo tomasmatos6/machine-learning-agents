@@ -1,4 +1,7 @@
 class MostrarAcoes():
+    """
+        Classe MostrarAcoes para ser possível a visualização dos resultados das procuras realizadas.
+    """
     def __init__(self, solucao):
         self.__operadores = [no.operador for no in solucao if no.operador != None]
         self.__dimensao = solucao.dimensao

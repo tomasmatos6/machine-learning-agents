@@ -2,6 +2,9 @@ from pee.melhor_prim.aval.heuristica import Heuristica
 
 
 class HeurBlocos(Heuristica):
+    """
+        CLasse HeurBlocos que representa a heuristica para este problema.
+    """
     def __init__(self,estado_final):
         self.estado_final = estado_final
 

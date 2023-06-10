@@ -48,8 +48,6 @@ class MecUtil():
                 utilidade += (T(s, a, sn) * (R(s, a, sn) + self.__gama * U[sn]))
             return utilidade
         """
-        T = self.__modelo.T
-        R = self.__modelo.R
-        Sucessores = self.__modelo.Sucessores
-        return sum(T(s,a,sn) * R(s,a,sn) +   self.__gama * U[sn] for sn in Sucessores(s,a))
+        T, R, suc = self.__modelo.T, self.__modelo.R, self.__modelo.Sucessores
+        return sum(T(s,a,sn) * R(s,a,sn) + self.__gama * U[sn] for sn in suc(s,a))
         

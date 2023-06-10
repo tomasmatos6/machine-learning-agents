@@ -2,11 +2,16 @@ from blocos.mod_prob.estado_pilha import EstadoPilha
 from copy import deepcopy
 
 class OperadorEmpilhar():
+    """
+        Classe OperadorEmpilhar que representa o operador que Empilha um bloco da pilha.
+    """
     def __init__(self, origem):
         self.__origem = origem-1
     
     def aplicar(self, estado):
-        "Pilha onde vou colucar o meu bloco"
+        """
+            Método aplicar() que adiciona um bloco na primeira pilha da pilha escolhida.
+        """
         novaPilha = deepcopy(estado.pilhas)
         if len(estado.pilhas[self.__origem]) != 0:
             bloco = estado.pilhas[self.__origem][0]

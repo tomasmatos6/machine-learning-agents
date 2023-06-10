@@ -4,6 +4,9 @@ from blocos.mod_prob.operador_empilhar import OperadorEmpilhar
 from mod.problema.problema import Problema
 
 class ProblemaPlanBlocos(Problema):
+    """
+        Classe ProblemaPlanBlocos que ser para criar o nosso problema.
+    """
     def __init__(self, seq_inicial, seq_final):
         super().__init__(EstadoPilha(seq_inicial),
                        [OperadorEmpilhar(2),

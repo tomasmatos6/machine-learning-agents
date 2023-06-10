@@ -5,6 +5,9 @@ from pee.melhor_prim.procura_custo_unif import ProcuraCustoUnif
 
 
 class Planeador():
+    """
+        Classe Planeador que serve para planear o nosso problema.
+    """
     def __init__(self, mecanismo = ProcuraCustoUnif()):
         self.__mecanismo = mecanismo
 
